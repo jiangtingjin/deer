@@ -8,7 +8,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-
+/**
+ * 
+ * @author tjjiang
+ *
+ */
 @Entity
 @Table(name="bw_scenery")
 public class BwScenery {

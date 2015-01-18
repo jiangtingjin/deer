@@ -41,7 +41,10 @@ public class UserController {
 		if(id!=null){
 			this.userService.update(user);
 		}
-		this.userService.save(user);
+		else
+		{
+			this.userService.save(user);
+		}
 		return "redirect:/user/list.do";
 	}
 	

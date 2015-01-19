@@ -1,17 +1,9 @@
 package com.etc.white.service.imp;
-
-
-
 import javax.annotation.Resource;
-
-
-
-
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import com.etc.white.dao.UserDAO;
 import com.etc.white.model.User;
 import com.etc.white.service.UserService;
@@ -30,6 +22,7 @@ public class UserServiceImpl extends BaseServiceImpl<User,Long> implements UserS
 	
 	@Resource(name="userDAO")
 	private UserDAO userDAO;
+
 	
 	@Autowired
 	public void setBaseDAO(UserDAO userDAO){

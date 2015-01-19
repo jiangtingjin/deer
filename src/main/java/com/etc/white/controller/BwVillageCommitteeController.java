@@ -5,51 +5,50 @@ import javax.annotation.Resource;
 
 
 
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.etc.white.model.BwCulture;
+import com.etc.white.model.BwVillageCommittee;
 
-import com.etc.white.service.BwCultureService;
+import com.etc.white.service.BwVillageCommitteeService;
 
 
 @Controller
-@RequestMapping("/bwCulture")
-public class BwCultureController {
+@RequestMapping("/bwVillageCommittee")
+public class BwVillageCommitteeController {
 	
 	@Resource
-	private BwCultureService bwCultureService;
+	private BwVillageCommitteeService bwVillageCommitteeService;
 	
 	@RequestMapping("/find")
 	public String find(Long id,ModelMap modelMap){
-		modelMap.addAttribute("bwCulture",bwCultureService.get(id));
+		modelMap.addAttribute("bwVillageCommittee",bwVillageCommitteeService.get(id));
 		return "user-info";
 	}
 	
 	@RequestMapping("/save")
-	public String save(Long id, @ModelAttribute("user") BwCulture bwCulture){
+	public String save(Long id, @ModelAttribute("user") BwVillageCommittee bwVillageCommittee){
 		if(id!=null){
-			this.bwCultureService.update(bwCulture);
+			this.bwVillageCommitteeService.update(bwVillageCommittee);
 		}
 		else
 		{
-			this.bwCultureService.save(bwCulture);
+			this.bwVillageCommitteeService.save(bwVillageCommittee);
 		}
 		return "redirect:/user/list.do";
 	}
 	
 	@RequestMapping("/delete")
 	public String delete(Long id){
-		this.bwCultureService.delete(id);
+		this.bwVillageCommitteeService.delete(id);
 		return "redirect:/index.jsp";
 	}
 	
 	@RequestMapping("/findlist")
 	public String findAll(ModelMap modelMap){
-		modelMap.addAttribute("bwCultureList", this.bwCultureService.findAll());
+		modelMap.addAttribute("bwVillageCommitteeList", this.bwVillageCommitteeService.findAll());
 		return "user-list";
 	}
 	

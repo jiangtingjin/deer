@@ -20,28 +20,28 @@ import com.etc.white.service.BaseService;
 
 @Service
 @Transactional
-public class BaseServiceImpl<T,PK extends Serializable> implements BaseService<T,PK>{
+public class BaseServiceImpl<MODEL,PK extends Serializable> implements BaseService<MODEL,PK>{
 	
 	private static final long serialVersionUID = 1738828121491218291L;
 
 	
-	private BaseDAO<T,PK> baseDAO;
+	private BaseDAO<MODEL,PK> baseDAO;
 
-	public BaseDAO<T, PK> getBaseDAO() {
+	public BaseDAO<MODEL, PK> getBaseDAO() {
 		return baseDAO;
 	}
 
-	public void setBaseDAO(BaseDAO<T, PK> baseDAO) {
+	public void setBaseDAO(BaseDAO<MODEL, PK> baseDAO) {
 		this.baseDAO = baseDAO;
 	}
 
 	@Override
-	public void save(T model) {
+	public void save(MODEL model) {
 		this.baseDAO.save(model);
 	}
 
 	@Override
-	public void saveOrUpdate(T model) {
+	public void saveOrUpdate(MODEL model) {
 		this.baseDAO.saveOrUpdate(model);
 	}
 
@@ -51,27 +51,27 @@ public class BaseServiceImpl<T,PK extends Serializable> implements BaseService<T
 	}
 
 	@Override
-	public void delete(T model) {
+	public void delete(MODEL model) {
 		this.baseDAO.delete(model);
 	}
 
 	@Override
-	public void update(T model) {
+	public void update(MODEL model) {
 		this.baseDAO.update(model);		
 	}
 
 	@Transactional(readOnly=true)
-	public T get(PK id) {
+	public MODEL get(PK id) {
 		return this.baseDAO.get(id);
 	}
 
 	@Transactional(readOnly=true)
-	public T find(PK id) {
+	public MODEL find(PK id) {
 		return this.baseDAO.find(id);
 	}
 
 	@Transactional(readOnly=true)
-	public List<T> findAll() {
+	public List<MODEL> findAll() {
 		return this.baseDAO.findAll();
 	}
 	

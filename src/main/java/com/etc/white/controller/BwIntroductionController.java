@@ -11,45 +11,45 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.etc.white.model.BwCulture;
+import com.etc.white.model.BwIntroduction;
 
-import com.etc.white.service.BwCultureService;
+import com.etc.white.service.BwIntroductionService;
 
 
 @Controller
-@RequestMapping("/bwCulture")
-public class BwCultureController {
+@RequestMapping("/bwIntroduction")
+public class BwIntroductionController {
 	
 	@Resource
-	private BwCultureService bwCultureService;
+	private BwIntroductionService bwIntroductionService;
 	
 	@RequestMapping("/find")
 	public String find(Long id,ModelMap modelMap){
-		modelMap.addAttribute("bwCulture",bwCultureService.get(id));
+		modelMap.addAttribute("bwIntroduction",bwIntroductionService.get(id));
 		return "user-info";
 	}
 	
 	@RequestMapping("/save")
-	public String save(Long id, @ModelAttribute("user") BwCulture bwCulture){
+	public String save(Long id, @ModelAttribute("user") BwIntroduction bwIntroduction){
 		if(id!=null){
-			this.bwCultureService.update(bwCulture);
+			this.bwIntroductionService.update(bwIntroduction);
 		}
 		else
 		{
-			this.bwCultureService.save(bwCulture);
+			this.bwIntroductionService.save(bwIntroduction);
 		}
 		return "redirect:/user/list.do";
 	}
 	
 	@RequestMapping("/delete")
 	public String delete(Long id){
-		this.bwCultureService.delete(id);
+		this.bwIntroductionService.delete(id);
 		return "redirect:/index.jsp";
 	}
 	
 	@RequestMapping("/findlist")
 	public String findAll(ModelMap modelMap){
-		modelMap.addAttribute("bwCultureList", this.bwCultureService.findAll());
+		modelMap.addAttribute("bwIntroductionList", this.bwIntroductionService.findAll());
 		return "user-list";
 	}
 	

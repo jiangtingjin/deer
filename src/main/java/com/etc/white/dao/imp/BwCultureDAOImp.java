@@ -2,10 +2,11 @@ package com.etc.white.dao.imp;
 
 import org.springframework.stereotype.Repository;
 
+
 import com.etc.white.dao.BwCultureDAO;
-import com.etc.white.dao.UserDAO;
+
 import com.etc.white.model.BwCulture;
-import com.etc.white.model.User;
+
 /**
  * 用户dao层实现
  * @author 蒋廷金

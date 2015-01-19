@@ -25,10 +25,10 @@ public class UserServiceImpl extends BaseServiceImpl<User,Long> implements UserS
 
 	
 	@Autowired
-	public void setBaseDAO(UserDAO userDAO){
-		super.setBaseDAO(userDAO);
-		this.userDAO = userDAO;
-		
-	}
+    public void setBaseDAO(UserDAO userDAO){
+        super.setBaseDAO(userDAO);
+        this.userDAO = userDAO;
+        
+    }
 	
 }

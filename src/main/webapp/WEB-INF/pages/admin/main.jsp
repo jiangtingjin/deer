@@ -7,12 +7,20 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>白鹿埠</title>
 </head>
-<frameset rows="127,*,11" frameborder="no" border="0" framespacing="0">
+<!-- <frameset rows="127,*,11" frameborder="no" border="0" framespacing="0">
 	<frame src="top.jsp" name="topFrame" scrolling="no"
 		noresize="noresize" id="topFrame" />
 	<frame src="center.jsp" name="mainFrame" id="mainFrame" />
 	<frame src="down.jsp" name="bottomFrame" scrolling="no"
 		noresize="noresize" id="bottomFrame" />
+</frameset> -->
+
+ <frameset rows="127,*,11" frameborder="no" border="0" framespacing="0">
+	<frame src="top.jsp" name="topFrame" scrolling="no"
+		noresize="noresize" id="topFrame" ><jsp:include page="top.jsp"/></frame>
+	<frame src="center.jsp" name="mainFrame" id="mainFrame" ><jsp:include page="center.jsp"/></frame>
+	<frame src="down.jsp" name="bottomFrame" scrolling="no"
+		noresize="noresize" id="bottomFrame" ><jsp:include page="down.jsp"/></frame>
 </frameset>
 <noframes>
 <body>

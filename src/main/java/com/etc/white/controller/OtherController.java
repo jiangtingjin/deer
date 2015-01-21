@@ -12,7 +12,7 @@ public class OtherController {
     public String mian(ModelMap model){
        
         model.put("right", "right");
-        return "admin/main";
+        return "admin/index";
     }
     @RequestMapping("/main")
     public String mian1(ModelMap model){

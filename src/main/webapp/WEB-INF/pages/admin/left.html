@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
-<div  style="height:100%; float:left;width=20%;">
+<div>
+<div  style="height:100%; float:left;">
   <ul id="navigation">
   <li> <a class="head">用户管理</a>
       <ul>
@@ -36,7 +37,7 @@
      <li> <a class="head">乡村美景</a>
       <ul>
         <li><a href="##" >添加美景</a></li>
-        <li><a href="/bwScenery/findlist.do" >查看/修改美景</a></li>
+        <li><a href="${pageContext.request.contextPath}/bwScenery/findlist.do" >查看/修改美景</a></li>
       </ul>
     </li>
       
@@ -62,3 +63,4 @@
   </ul>
 </div>
 
+</div>

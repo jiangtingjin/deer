@@ -5,8 +5,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>白鹿埠后台管理工作平台 by Jessica</title>
-<link rel="stylesheet" type="text/css" href="css/style.css"/>
-<script type="text/javascript" src="js/js.js"></script>
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style.css"/>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/js.js"></script>
 </head>
 <body>
 <div id="top"> </div>
@@ -26,11 +26,11 @@
         <label>验证码：
         <input name="chknumber" type="text" id="chknumber" maxlength="4" class="chknumber_input" />
         </label>
-        <img src="images/checkcode.png" id="safecode" />
+        <img src="${pageContext.request.contextPath}/images/checkcode.png" id="safecode" />
       </div>
       
-      <div class="button"> <img src="images/dl.gif" width="57" height="20" onclick="form_submit()" >
-       <img src="images/cz.gif" width="57" height="20" onclick="form_reset()"> </div>
+      <div class="button"> <img src="${pageContext.request.contextPath}/images/dl.gif" width="57" height="20" onclick="form_submit()" >
+       <img src="${pageContext.request.contextPath}/images/cz.gif" width="57" height="20" onclick="form_reset()"> </div>
 
 
     

@@ -50,7 +50,8 @@ public class BwIntroductionController {
 	@RequestMapping("/findlist")
 	public String findAll(ModelMap modelMap){
 		modelMap.addAttribute("bwIntroductionList", this.bwIntroductionService.findAll());
-		return "user-list";
+		modelMap.put("type","introduction");
+		return "admin/main";
 	}
 	
 }

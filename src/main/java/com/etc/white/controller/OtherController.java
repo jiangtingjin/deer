@@ -8,10 +8,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/other")
 public class OtherController {
     
-    @RequestMapping("/main")
-    public String mian(){
+    @RequestMapping("/index")
+    public String mian(ModelMap model){
        
+        model.put("right", "right");
         return "admin/main";
     }
+    @RequestMapping("/main")
+    public String mian1(ModelMap model){
+        model.put("news", "news");
+        return "admin/main";
+    }
+
 
 }

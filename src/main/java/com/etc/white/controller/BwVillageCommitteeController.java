@@ -49,7 +49,8 @@ public class BwVillageCommitteeController {
 	@RequestMapping("/findlist")
 	public String findAll(ModelMap modelMap){
 		modelMap.addAttribute("bwVillageCommitteeList", this.bwVillageCommitteeService.findAll());
-		return "user-list";
+		modelMap.put("type","villageCommitteeList");
+		return "admin/main";
 	}
 	
 }

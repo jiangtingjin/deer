@@ -49,7 +49,8 @@ public class BwForumController {
 	@RequestMapping("/findlist")
 	public String findAll(ModelMap modelMap){
 		modelMap.addAttribute("bwForumList", this.bwForumService.findAll());
-		return "user-list";
+		modelMap.put("type","forum");
+		return "admin/main";
 	}
 	
 }

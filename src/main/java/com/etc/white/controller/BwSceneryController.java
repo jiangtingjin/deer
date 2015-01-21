@@ -49,7 +49,8 @@ public class BwSceneryController {
 	@RequestMapping("/findlist")
 	public String findAll(ModelMap modelMap){
 		modelMap.addAttribute("bwSceneryList", this.bwSceneryService.findAll());
-		return "user-list";
+		modelMap.put("type","scenery");
+		return "admin/main";
 	}
 	
 }

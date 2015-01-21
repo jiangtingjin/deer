@@ -49,7 +49,8 @@ public class BwUserController {
 	@RequestMapping("/findlist")
 	public String findAll(ModelMap modelMap){
 		modelMap.addAttribute("bwUserList", this.bwUserService.findAll());
-		return "user-list";
+		modelMap.put("type","user");
+		return "admin/main";
 	}
 	
 }

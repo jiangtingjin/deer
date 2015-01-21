@@ -1,42 +1,7 @@
-﻿<%@ page language="java" contentType="text/html; charset=utf-8"
+<%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>无标题文档</title>
-<style type="text/css">
-<!--
-body {
-	margin-left: 3px;
-	margin-top: 0px;
-	margin-right: 3px;
-	margin-bottom: 0px;
-}
-.STYLE1 {
-	color: #e1e2e3;
-	font-size: 12px;
-}
-.STYLE6 {color: #000000; font-size: 12; }
-.STYLE10 {color: #000000; font-size: 12px; }
-.STYLE19 {
-	color: #344b50;
-	font-size: 12px;
-}
-.STYLE21 {
-	font-size: 12px;
-	color: #3b6375;
-}
-.STYLE22 {
-	font-size: 12px;
-	color: #295568;
-}
--->
-</style>
-</head>
-
-<body>
-<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+<div style="height:100%; float:left;width=80%;">
+<table  border="0" align="center" cellpadding="0" cellspacing="0" style="width:1485px;">
   <tr>
     <td height="30"><table width="100%" border="0" cellspacing="0" cellpadding="0">
       <tr>
@@ -44,13 +9,13 @@ body {
           <tr>
             <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
               <tr>
-                <td width="6%" height="19" valign="bottom"><div align="center"><img src="images/tb.gif" width="14" height="14" /></div></td>
-                <td width="94%" valign="bottom"><span class="STYLE1"> 管理人员基本信息列表</span></td>
+                <td width="6%" height="19" valign="bottom"><div align="center"><img src="${pageContext.request.contextPath}/images/tb.gif" width="14" height="14" /></div></td>
+                <td width="94%" valign="bottom"><span class="STYLE1">留言列表</span></td>
               </tr>
             </table></td>
             <td><div align="right"><span class="STYLE1">
               <input type="checkbox" name="checkbox11" id="checkbox11" />
-              全选      &nbsp;&nbsp;<img src="images/add.gif" width="10" height="10" /> 添加   &nbsp; <img src="images/del.gif" width="10" height="10" /> 删除    &nbsp;&nbsp;<img src="images/edit.gif" width="10" height="10" /> 编辑   &nbsp;</span><span class="STYLE1"> &nbsp;</span></div></td>
+              全选      &nbsp;&nbsp;<img src="${pageContext.request.contextPath}/images/add.gif" width="10" height="10" /> 添加   &nbsp; <img src="${pageContext.request.contextPath}/images/del.gif" width="10" height="10" /> 删除    &nbsp;&nbsp;<img src="${pageContext.request.contextPath}/images/edit.gif" width="10" height="10" /> 编辑   &nbsp;</span><span class="STYLE1"> &nbsp;</span></div></td>
           </tr>
         </table></td>
       </tr>
@@ -178,14 +143,14 @@ body {
           <tr>
           
 
-		  <td width="40"><img src="images/first.gif" width="37" height="15" /></td>
-                  <td width="45"><img src="images/back.gif" width="43" height="15" /></td>
-                  <td width="45"><img src="images/next.gif" width="43" height="15" /></td>
-                  <td width="40"><img src="images/last.gif" width="37" height="15" /></td>
+		  <td width="40"><img src="${pageContext.request.contextPath}/images/first.gif" width="37" height="15" /></td>
+                  <td width="45"><img src="${pageContext.request.contextPath}/images/back.gif" width="43" height="15" /></td>
+                  <td width="45"><img src="${pageContext.request.contextPath}/images/next.gif" width="43" height="15" /></td>
+                  <td width="40"><img src="${pageContext.request.contextPath}/images/last.gif" width="37" height="15" /></td>
 		<td width="100"><div align="center"><span class="STYLE22">转到第
                     <input name="textfield" type="text" size="4" style="height:12px; width:20px; border:1px solid #999999;" /> 
                     页 </span></div></td>
-                  <td width="40"><img src="images/go.gif" width="37" height="15" /></td>
+                  <td width="40"><img src="${pageContext.request.contextPath}/images/go.gif" width="37" height="15" /></td>
 
                
           </tr>
@@ -194,5 +159,4 @@ body {
     </table></td>
   </tr>
 </table>
-</body>
-</html>
+</div>

@@ -50,7 +50,8 @@ public class BwNewsController {
 	@RequestMapping("/findlist")
 	public String findAll(ModelMap modelMap){
 		modelMap.addAttribute("bwNewsList", this.bwNewsService.findAll());
-		return "user-list";
+		modelMap.put("type","news");
+		return "admin/main";
 	}
 	
 }

@@ -50,7 +50,8 @@ public class BwCultureController {
 	@RequestMapping("/findlist")
 	public String findAll(ModelMap modelMap){
 		modelMap.addAttribute("bwCultureList", this.bwCultureService.findAll());
-		return "user-list";
+		modelMap.put("type","culture");
+		return "admin/main";
 	}
 	
 }

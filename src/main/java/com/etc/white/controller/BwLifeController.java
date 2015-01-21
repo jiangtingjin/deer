@@ -50,7 +50,8 @@ public class BwLifeController {
 	@RequestMapping("/findlist")
 	public String findAll(ModelMap modelMap){
 		modelMap.addAttribute("bwLifeList", this.bwLifeService.findAll());
-		return "user-list";
+		modelMap.put("type","life");
+		return "admin/main";
 	}
 	
 }

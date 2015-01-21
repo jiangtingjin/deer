@@ -30,15 +30,16 @@ public class BwIntroductionController {
 	}
 	
 	@RequestMapping("/save")
-	public String save(Long id, @ModelAttribute("user") BwIntroduction bwIntroduction){
-		if(id!=null){
+	public String save(Long id, @ModelAttribute("user") BwIntroduction bwIntroduction,ModelMap modelMap){
+		/*if(id!=null){
 			this.bwIntroductionService.update(bwIntroduction);
 		}
 		else
 		{
 			this.bwIntroductionService.save(bwIntroduction);
-		}
-		return "redirect:/user/list.do";
+		}*/
+		modelMap.put("type","introductionAdd");
+		return "admin/main";
 	}
 	
 	@RequestMapping("/delete")

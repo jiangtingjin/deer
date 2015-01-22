@@ -5,13 +5,14 @@ import javax.annotation.Resource;
 
 
 
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.etc.white.model.BwUser;
-
 import com.etc.white.service.BwUserService;
 
 
@@ -28,8 +29,9 @@ public class BwUserController {
 		return "user-info";
 	}
 	
-	@RequestMapping("/save")
+	@RequestMapping(value="save",method=RequestMethod.POST)
 	public String save(Long id, @ModelAttribute("user") BwUser bwUser){
+	    
 		if(id!=null){
 			this.bwUserService.update(bwUser);
 		}
@@ -37,8 +39,16 @@ public class BwUserController {
 		{
 			this.bwUserService.save(bwUser);
 		}
-		return "redirect:/user/list.do";
+		return "redirect:/bwUser/findlist.do";
 	}
+	
+	@RequestMapping(value="save",method=RequestMethod.GET)
+    public String save(ModelMap modelMap){
+        
+	    modelMap.put("type","userAdd");
+        return "admin/main";
+       
+    }
 	
 	@RequestMapping("/delete")
 	public String delete(Long id){

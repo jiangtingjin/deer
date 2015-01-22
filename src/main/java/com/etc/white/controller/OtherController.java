@@ -17,7 +17,7 @@ public class OtherController {
     @RequestMapping("/main")
     public String mian1(ModelMap model){
         model.put("news", "news");
-        return "admin/main";
+        return "admin/center/index";
     }
 
 

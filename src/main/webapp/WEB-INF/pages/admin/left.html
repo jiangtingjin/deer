@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
-<div>
-<div  style="height:100%; float:left;">
-  <ul id="navigation">
+<div class="mycenter"  >
+  <ul id="navigation" >
   <li> <a class="head">用户管理</a>
       <ul>
+        <li><a href="${pageContext.request.contextPath}/bwUser/save.do" >添加</a></li>
         <li><a href="${pageContext.request.contextPath}/bwUser/findlist.do" target="rightFrame">查看</a></li>
         
       </ul>
@@ -18,33 +18,33 @@
     </li>
     <li> <a class="head">新闻资讯管理</a>
       <ul>
-        <li><a href="##" target="rightFrame">添加新闻</a></li>
+        <li><a href="${pageContext.request.contextPath}/bwNews/save.do" target="rightFrame">添加新闻</a></li>
         <li><a href="${pageContext.request.contextPath}/bwNews/findlist.do" target="rightFrame">查看/修改新闻</a></li>
       </ul>
     </li>
     <li> <a class="head">文化管理</a>
       <ul>
-        <li><a href="" >添加文化</a></li>
+        <li><a href="${pageContext.request.contextPath}/bwCulture/save.do" >添加文化</a></li>
         <li><a href="${pageContext.request.contextPath}/bwCulture/findlist.do" >查看/删除文化</a></li>
       </ul>
     </li>
     
     <li> <a class="head">舌尖生活</a>
       <ul>
-        <li><a href="##" >添加舌尖</a></li>
+        <li><a href="${pageContext.request.contextPath}/bwLife/save.do" >添加舌尖</a></li>
         <li><a href="${pageContext.request.contextPath}/bwLife/findlist.do" >查看/修改舌尖</a></li>
       </ul>
     </li>
      <li> <a class="head">乡村美景</a>
       <ul>
-        <li><a href="##" >添加美景</a></li>
+        <li><a href="${pageContext.request.contextPath}/bwScenery/save.do" >添加美景</a></li>
         <li><a href="${pageContext.request.contextPath}/bwScenery/findlist.do" >查看/修改美景</a></li>
       </ul>
     </li>
       
     <li> <a class="head">村委会信息管理</a>
       <ul>
-        <li><a href="##" >添加村干部信息</a></li>
+        <li><a href="${pageContext.request.contextPath}/bwIntroduction/save.do" >添加村干部信息</a></li>
         <li><a href="${pageContext.request.contextPath}/bwIntroduction/findlist.do" >查看/删除村干部信息</a></li>
         
       </ul>
@@ -62,6 +62,5 @@
       </ul>
     </li>
   </ul>
-</div>
 
 </div>

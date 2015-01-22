@@ -1,5 +1,5 @@
-<div height="75%">
-<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+<div class="mycenter">
+<table width="100%"  border="0" cellspacing="0" cellpadding="0" >
   <tr>
     <td width="8" bgcolor="#353c44">&nbsp;</td>
     <td width="147" valign="top"><%@include file="left.html" %></td>
@@ -12,13 +12,14 @@
     <c:if test="${type=='life'}" > <%@include file="life.html" %></c:if>
     <c:if test="${type=='scenery'}" > <%@include file="scenery.html" %></c:if>	
     <c:if test="${type=='user'}" > <%@include file="user.html" %></c:if>
+    <c:if test="${type=='userAdd'}" > <%@include file="userAdd.html" %></c:if>
     <c:if test="${type=='newsAdd'}" > <%@include file="newsAdd.html" %></c:if>
     <c:if test="${type=='cultureAdd'}" > <%@include file="cultureAdd.html" %></c:if> 
     <c:if test="${type=='forumAdd'}" > <%@include file="forumAdd.html" %></c:if>
     	
     <c:if test="${type=='lifeAdd'}" > <%@include file="lifeAdd.html" %></c:if>
     <c:if test="${type=='sceneryAdd'}" > <%@include file="sceneryAdd.html" %></c:if>	
-    <c:if test="${type=='userAdd'}" > <%@include file="userAdd.html" %></c:if>
+   
     <c:if test="${type=='introduction'}" > <%@include file="introduction.html" %></c:if> 
      <c:if test="${type=='introductionAdd'}" > <%@include file="introductionAdd.html" %></c:if> 	
     </td>

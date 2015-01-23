@@ -27,6 +27,7 @@ public class BwUser {
     private String uPhone;
     private String uIdentity;
     private String uSex;
+    private Integer age;
     private String uremark;
     public Long getuId() {
         return uId;
@@ -83,6 +84,12 @@ public class BwUser {
         this.uremark = uremark;
     }
     
+    public Integer getAge() {
+        return age;
+    }
+    public void setAge(Integer age) {
+        this.age = age;
+    }
     public String toString(){
         return org.apache.commons.lang.builder.ReflectionToStringBuilder.toString(this);
     }  

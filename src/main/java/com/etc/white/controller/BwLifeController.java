@@ -6,13 +6,14 @@ import javax.annotation.Resource;
 
 
 
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.etc.white.model.BwLife;
-
 import com.etc.white.service.BwLifeService;
 
 
@@ -29,7 +30,7 @@ public class BwLifeController {
 		return "user-info";
 	}
 	
-	@RequestMapping("/save")
+	@RequestMapping(value="save",method=RequestMethod.POST)
 	public String save(Long id, @ModelAttribute("user") BwLife bwLife){
 		if(id!=null){
 			this.bwLifeService.update(bwLife);
@@ -40,6 +41,14 @@ public class BwLifeController {
 		}
 		return "redirect:/user/list.do";
 	}
+	
+	  @RequestMapping(value="save",method=RequestMethod.GET)
+      public String save(ModelMap modelMap){
+          
+          modelMap.put("type","lifeAdd");
+          return "admin/main";
+         
+      }
 	
 	@RequestMapping("/delete")
 	public String delete(Long id){

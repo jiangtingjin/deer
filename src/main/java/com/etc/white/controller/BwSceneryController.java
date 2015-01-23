@@ -5,13 +5,14 @@ import javax.annotation.Resource;
 
 
 
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.etc.white.model.BwScenery;
-
 import com.etc.white.service.BwSceneryService;
 
 
@@ -28,7 +29,7 @@ public class BwSceneryController {
 		return "user-info";
 	}
 	
-	@RequestMapping("/save")
+	@RequestMapping(value="save",method=RequestMethod.POST)
 	public String save(Long id, @ModelAttribute("user") BwScenery bwScenery){
 		if(id!=null){
 			this.bwSceneryService.update(bwScenery);
@@ -39,6 +40,14 @@ public class BwSceneryController {
 		}
 		return "redirect:/user/list.do";
 	}
+	
+	  @RequestMapping(value="save",method=RequestMethod.GET)
+      public String save(ModelMap modelMap){
+          
+          modelMap.put("type","sceneryAdd");
+          return "admin/main";
+         
+      }
 	
 	@RequestMapping("/delete")
 	public String delete(Long id){

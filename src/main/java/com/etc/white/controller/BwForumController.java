@@ -6,13 +6,14 @@ import javax.annotation.Resource;
 
 
 
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.etc.white.model.BwForum;
-
 import com.etc.white.service.BwForumService;
 
 @Controller
@@ -28,7 +29,7 @@ public class BwForumController {
 		return "user-info";
 	}
 	
-	@RequestMapping("/save")
+	@RequestMapping(value="save",method=RequestMethod.POST)
 	public String save(Long id, @ModelAttribute("user") BwForum bwForum){
 		if(id!=null){
 			this.bwForumService.update(bwForum);
@@ -39,6 +40,14 @@ public class BwForumController {
 		}
 		return "redirect:/user/list.do";
 	}
+	
+	  @RequestMapping(value="save",method=RequestMethod.GET)
+      public String save(ModelMap modelMap){
+          
+          modelMap.put("type","forumAdd");
+          return "admin/main";
+         
+      }
 	
 	@RequestMapping("/delete")
 	public String delete(Long id){

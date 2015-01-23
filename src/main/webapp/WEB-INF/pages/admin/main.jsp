@@ -18,10 +18,10 @@
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.accordion.js"></script>
 <script language="javascript">
 	jQuery().ready(function(){
-		 var height=screen.height;
-		 $(".mycenter").height(height-127-11-127);
+		/*  var height=screen.height;
+		 $(".mycenter").height(height-127-11-127); */
 		 
-		  jQuery('#navigation').accordion({
+		   jQuery('#navigation').accordion({
 			header: '.head',
 			navigation1: true, 
 			event: 'click',

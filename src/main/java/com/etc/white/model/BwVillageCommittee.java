@@ -30,6 +30,7 @@ public class BwVillageCommittee {
 	 * 7->就业服务
 	 */
 	private int vcTitle;
+	private String vcHead;
 	private String vcContent;
 	private Date vcCreateTime;
 	private String vcAuthor;
@@ -71,7 +72,13 @@ public class BwVillageCommittee {
 		this.vcRemark = vcRemark;
 	}
 	
-	public String toString(){
+	public String getVcHead() {
+        return vcHead;
+    }
+    public void setVcHead(String vcHead) {
+        this.vcHead = vcHead;
+    }
+    public String toString(){
         return org.apache.commons.lang.builder.ReflectionToStringBuilder.toString(this);
     } 
 }

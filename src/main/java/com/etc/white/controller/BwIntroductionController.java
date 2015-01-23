@@ -6,13 +6,14 @@ import javax.annotation.Resource;
 
 
 
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.etc.white.model.BwIntroduction;
-
 import com.etc.white.service.BwIntroductionService;
 
 
@@ -29,7 +30,7 @@ public class BwIntroductionController {
 		return "user-info";
 	}
 	
-	@RequestMapping("/save")
+	@RequestMapping(value="save",method=RequestMethod.POST)
 	public String save(Long id, @ModelAttribute("user") BwIntroduction bwIntroduction,ModelMap modelMap){
 		/*if(id!=null){
 			this.bwIntroductionService.update(bwIntroduction);
@@ -41,6 +42,14 @@ public class BwIntroductionController {
 		modelMap.put("type","introductionAdd");
 		return "admin/main";
 	}
+	
+	   @RequestMapping(value="save",method=RequestMethod.GET)
+	    public String save(ModelMap modelMap){
+	        
+	        modelMap.put("type","introductionAdd");
+	        return "admin/main";
+	       
+	    }
 	
 	@RequestMapping("/delete")
 	public String delete(Long id){

@@ -10,14 +10,13 @@ public class OtherController {
     
     @RequestMapping("/index")
     public String mian(ModelMap model){
-       
-        model.put("right", "right");
+
         return "admin/index";
     }
     @RequestMapping("/main")
     public String mian1(ModelMap model){
         model.put("news", "news");
-        return "admin/center/index";
+        return "admin/main";
     }
 
 
